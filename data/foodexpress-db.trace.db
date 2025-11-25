@@ -55,3 +55,15 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-11-25 17:33:13.996686+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PHONE CHARACTER VARYING(20)": "'12345678933342342342342342342342343445343434234234234234234234' (62)"
+Value too long for column "PHONE CHARACTER VARYING(20)": "'12345678933342342342342342342342343445343434234234234234234234' (62)"; SQL statement:
+update restaurants set address=?,name=?,phone=? where id=? [22001-232]
+2025-11-25 17:36:27.848309+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PHONE CHARACTER VARYING(20)": "'123456789123456789875645434333333' (33)"
+Value too long for column "PHONE CHARACTER VARYING(20)": "'123456789123456789875645434333333' (33)"; SQL statement:
+insert into restaurants (address,name,phone,id) values (?,?,?,default) [22001-232]
+2025-11-25 18:13:11.518272+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PHONE CHARACTER VARYING(20)": "'78978978933433432434234234234234234234234436346' (47)"
+Value too long for column "PHONE CHARACTER VARYING(20)": "'78978978933433432434234234234234234234234436346' (47)"; SQL statement:
+update restaurants set address=?,name=?,phone=? where id=? [22001-232]
